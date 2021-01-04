@@ -17,20 +17,18 @@ function App() {
                 <div className='fast'>
                     <p>Buttons with no delay</p>
                     <div>
-                        <button onClick={fastCount}>
-                            setCount(count++)
-                        </button>
+                        <button onClick={fastCount}>setCount(count + 1)</button>
                         <button onClick={fastPrevState}>
-                            setCount(prevState)
+                            {`setCount((prevState) => prevState + 1)`}
                         </button>
                     </div>
                 </div>
                 <p>Buttons with 2 second delay</p>
                 <div>
-                    <button onClick={slowCount}>setCount(count++)</button>
-                    <button onClick={slowPrevState}>
-                        setCount(prevState)
-                    </button>
+                    <button onClick={slowCount}>setCount(count + 1)</button>
+                    <button
+                        onClick={slowPrevState}
+                    >{`setCount((prevState) => prevState + 1)`}</button>
                 </div>
             </div>
         </div>
